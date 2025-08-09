@@ -110,8 +110,9 @@ def main() -> None:
 
     # evaluate on validation set
     acc, mrr = compute_accuracy_and_mrr(model, val_questions, val_answers)
-    print(f"Validation accuracy: {acc:.4f}")
+    print(f"Validation accuracy: {acc*100:.2f}")
     print(f"Validation MRR: {mrr:.4f}")
+
 
     # save model
     model.save(args.model_out)
