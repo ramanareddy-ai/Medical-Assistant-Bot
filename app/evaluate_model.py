@@ -46,9 +46,8 @@ def main() -> None:
     model = TFIDFRetrievalQA.load(args.model_path)
     # compute metrics
     acc, mrr = compute_accuracy_and_mrr(model, test_questions, test_answers)
-    print(f"Test accuracy: {acc:.4f}")
-    print(f"Test MRR: {mrr:.4f}")
-
+   print(f"Validation accuracy: {acc*100:.2f}")
+print(f"Validation MRR: {mrr:.4f}")
 
 if __name__ == "__main__":
     main()
